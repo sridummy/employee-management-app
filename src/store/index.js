@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 import { addTeamMember } from './actions/member';
 
-const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(thunk)));
+const store = createStore(rootReducer,applyMiddleware(thunk));
 store.subscribe(() => console.log(store.getState()));
 export default store;
 
