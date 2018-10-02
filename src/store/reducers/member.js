@@ -26,17 +26,17 @@ const member = (state = initialstate, action) => {
   switch (action.type) {
     case ADD_TEAM_MEMBER:
       return {
-        ...this.state,
+        ...state,
         members:state.members.concat(action.payload)
       };
     case EDIT_TEAM_MEMBER:
       return {
-        ...this.state,
+        ...state,
         members:action.payload
       };
       case DELETE_MEMBER:
       return {
-        ...this.state,
+        ...state,
         members:action.payload
       }
       default:
